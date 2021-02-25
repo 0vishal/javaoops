@@ -7,25 +7,23 @@ public class EmpwageBuilder {
         System.out.println("Welcome to Employee wage computation problem on master branch");
         Employee emp = new Employee();
 
-        emp.IS_FULLTIME = 1;
-        emp.empcheck();
 
+        emp.EMPWAGEPERHOUR = 20;
+        emp.EMPDAILYHOUR = 8;
+        emp.dailwage();
 
     }
 }
         class Employee {
-            int IS_FULLTIME;
+            int EMPWAGEPERHOUR;
+            int EMPDAILYHOUR;
+
+            void dailwage() {
+
+                int DAILYWAGE = (EMPDAILYHOUR * EMPWAGEPERHOUR);
+                System.out.println("Daily wage is " + DAILYWAGE);
 
 
-            void empcheck() {
-                
-                double empcheck = Math.floor(Math.random() * 10) % 2;
-
-                if (empcheck == IS_FULLTIME) {
-                    System.out.println("Employee is present");
-                } else {
-                    System.out.println("Employee is absent");
-                }
             }
         }
 
