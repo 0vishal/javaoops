@@ -3,29 +3,43 @@ import java.util.Scanner;
 public class EmpwageBuilder {
 
     public static void main(String[] args) {
+       
         // write your code here
+
         System.out.println("Welcome to Employee wage computation problem on master branch");
+        System.out.println("Calculate wage 1.FullTime 2.PartTime");
+        Scanner scan = new Scanner(System.in);
+        int TIME = scan.nextInt();
+
         Employee emp = new Employee();
 
-
         emp.EMPWAGEPERHOUR = 20;
-        emp.EMPDAILYHOUR = 8;
-        emp.dailwage();
+        emp.wage();
 
     }
 }
         class Employee {
             int EMPWAGEPERHOUR;
-            int EMPDAILYHOUR;
+            int EMPTIME;
+            int TIME;
+            int DAILYWAGE;
 
-            void dailwage() {
+            void wage() {
+                int EMPTIME;
 
-                int DAILYWAGE = (EMPDAILYHOUR * EMPWAGEPERHOUR);
+                if ( TIME == 1 )  {
+                    EMPTIME = 8;
+                } else {
+                    EMPTIME = 4;
+                }
+                int DAILYWAGE = (EMPTIME * EMPWAGEPERHOUR);
                 System.out.println("Daily wage is " + DAILYWAGE);
-
-
             }
         }
+
+
+
+
 
 
 
