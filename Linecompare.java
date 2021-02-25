@@ -22,7 +22,15 @@ public class Linecompare {
             Integer obj2 = new Integer(length2);
             int VALUE = obj1.compareTo(obj2);
             value.compare(VALUE);
+	    
+            int Equals= lengthL1.equals(lengthL2);
+	        if (Equals== True){
+        	    System.out.println("Lines are equal ");
+        	}
+        	else
+            	System.out.println("Lines are not equal");
 
+	    }
 
         }
 
